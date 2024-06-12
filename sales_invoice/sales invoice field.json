@@ -1,0 +1,39 @@
+{
+    "doctype": "Sales Invoice",
+    "fields": [
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "options": "Customer",
+            "label": "Customer"
+        },
+        {
+            "fieldname": "invoice_date",
+            "fieldtype": "Date",
+            "label": "Invoice Date"
+        },
+        {
+            "fieldname": "invoice_items",
+            "fieldtype": "Table",
+            "options": "Sales Invoice Item",
+            "label": "Invoice Items"
+        },
+        {
+            "fieldname": "billing_address",
+            "fieldtype": "Text",
+            "label": "Billing Address"
+        },
+        {
+            "fieldname": "invoice_status",
+            "fieldtype": "Select",
+            "options": "Draft\nIssued\nPaid",
+            "label": "Invoice Status"
+        },
+        {
+            "fieldname": "sales_representative",
+            "fieldtype": "Link",
+            "options": "Employee",
+            "label": "Sales Representative"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "doctype": "Sales Invoice Item",
+    "fields": [
+        {
+            "fieldname": "item_code",
+            "fieldtype": "Link",
+            "options": "Item",
+            "label": "Item Code"
+        },
+        {
+            "fieldname": "quantity",
+            "fieldtype": "Float",
+            "label": "Quantity"
+        },
+        {
+            "fieldname": "rate",
+            "fieldtype": "Currency",
+            "label": "Rate"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "depends_on": "eval:doc.quantity * doc.rate"
+        }
+    ]
+}
