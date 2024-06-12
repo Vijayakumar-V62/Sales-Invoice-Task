@@ -1,6 +1,9 @@
 import frappe
 
-def get_all_sales_invoices():
-    invoices = frappe.get_all("Sales Invoice", fields=["name", "invoice_date", "total_amount"])
+def fetch_sales_invoices():
+    invoices = frappe.get_all('Sales Invoice', fields=['name', 'invoice_date', 'total'])
     for invoice in invoices:
-        print(invoice)
+        print(f"Invoice Number: {invoice.name}, Date: {invoice.invoice_date}, Total Amount: {invoice.total}")
+
+
+

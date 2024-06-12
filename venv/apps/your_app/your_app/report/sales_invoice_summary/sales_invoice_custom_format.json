@@ -1,0 +1,10 @@
+{
+    "docstatus": 0,
+    "doctype": "Print Format",
+    "name": "Sales Invoice Custom Format",
+    "module": "Your Module",
+    "custom_format": 1,
+    "html": "<div><h1>Sales Invoice</h1><p>Customer: {{ doc.customer }}</p><p>Invoice Date: {{ doc.invoice_date }}</p><table><tr><th>Item Code</th><th>Quantity</th><th>Rate</th><th>Total Amount</th></tr>{% for item in doc.invoice_items %}<tr><td>{{ item.item_code }}</td><td>{{ item.quantity }}</td><td>{{ item.rate }}</td><td>{{ item.total_amount }}</td></tr>{% endfor %}</table><p>Total: {{ doc.total }}</p></div>"
+}
+
+

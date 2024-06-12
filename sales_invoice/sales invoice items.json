@@ -1,5 +1,8 @@
 {
-    "doctype": "Sales Invoice Item",
+    "doctype": "DocType",
+    "name": "Sales Invoice Item",
+    "module": "Your Module",
+    "custom": 1,
     "fields": [
         {
             "fieldname": "item_code",
@@ -21,7 +24,10 @@
             "fieldname": "total_amount",
             "fieldtype": "Currency",
             "label": "Total Amount",
-            "depends_on": "eval:doc.quantity * doc.rate"
+            "fetch_from": "calculate_total_amount"
         }
     ]
 }
+
+
+
